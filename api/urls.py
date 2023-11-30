@@ -1,5 +1,11 @@
 from django.urls import path
-from .views import BuyItemView, ItemDetailView, CancelView, SuccessView
+
+from .views import (
+    BuyItemView,
+    ItemDetailView,
+    CancelView,
+    SuccessView
+)
 
 urlpatterns = [
     path('buy/<int:id>/', BuyItemView.as_view(), name='buy-item'),

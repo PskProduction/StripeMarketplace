@@ -7,6 +7,9 @@ from api.models import Item
 class ItemAdmin(admin.ModelAdmin):
     list_display = [
         'id',
+        'name',
         'description',
         'price',
     ]
+
+    search_fields = ["name"]
